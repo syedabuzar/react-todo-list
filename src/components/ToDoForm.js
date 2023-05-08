@@ -12,7 +12,7 @@ export const ToDoForm = ({ addToDo }) => {
       <input
         type='text'
         className='todo-input'
-        placeholder='What is the task today?'
+        placeholder="Enter today's tasks"
         onChange={(e) => setValue(e.target.value)}
         value={value}
       />
