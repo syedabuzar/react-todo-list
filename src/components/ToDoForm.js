@@ -5,6 +5,7 @@ export const ToDoForm = ({ addToDo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addToDo(value);
+    setValue('');
   };
   return (
     <form className='TodoForm' onSubmit={handleSubmit}>
@@ -13,6 +14,7 @@ export const ToDoForm = ({ addToDo }) => {
         className='todo-input'
         placeholder='What is the task today?'
         onChange={(e) => setValue(e.target.value)}
+        value={value}
       />
       <button type='submit' className='todo-btn'>
         Add Task
